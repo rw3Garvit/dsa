@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //       class Car {
+      //         constructor(brand) {
+      //           this.carname = brand;
+      //         }
+      //         present() {
+      //           return "I have a " + this.carname;
+      //         }
+      //       }
+
+      //       class Model extends Car {
+      //         constructor(brand, mod) {
+      //           super(brand);
+      //           this.model = mod;
+      //         }
+      //         show() {
+      //           return this.present() + ", it is a " + this.model;
+      //         }
+      //       }
+
+      //       const myCar = new Car("Ford");]
+
+      // console.log(myCar);
+
+      class car {
+        constructor(carname) {
+          this.carname = carname;
+        }
+
+        printCarName() {
+          console.log(this.carname, "this is from parent class");
+        }
+      }
+
+      class insurance extends car {
+        constructor(carname, price) {
+          super(carname);
+          this.price = price;
+        }
+
+        printchild() {
+          console.log(this.printCarName(), "this is child class");
+        }
+      }
+
+      let p1 = new insurance("bmw", 1200);
+
+      console.log(p1.printchild());
+    </script>
+  </body>
+</html>
